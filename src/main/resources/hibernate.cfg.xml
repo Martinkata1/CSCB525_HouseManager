@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/housemanager?createDatabaseIfNotExist=true&amp;serverTimezone=Europe/Sofia
+        </property>
+
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">M200311k</property>
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="org.example.entity.Company"/>
+        <mapping class="org.example.entity.Employee"/>
+        <mapping class="org.example.entity.Building"/>
+        <mapping class="org.example.entity.Apartment"/>
+        <mapping class="org.example.entity.Resident"/>
+        <mapping class="org.example.entity.Pet"/>
+        <mapping class="org.example.entity.Payment"/>
+
+    </session-factory>
+</hibernate-configuration>
